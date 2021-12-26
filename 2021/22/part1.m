@@ -30,7 +30,7 @@ for i = 1:numel(onoff)
     cube(x, y, z) = onoff(i);
 end
 
-nnz(cube)
+answer = nnz(cube)
 
 
 function data = clipBBox(data, bbox, offset)
