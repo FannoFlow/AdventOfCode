@@ -1,0 +1,3 @@
+
+data = parseInput("input.txt");
+
