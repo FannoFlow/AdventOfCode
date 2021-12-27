@@ -5,14 +5,14 @@ tf = false(size(data));
 
 for m = moves.'
 
-tf(data == m) = true;
+    tf(data == m) = true;
 
-boardWin = any(all(tf, 1), 2) | any(all(tf, 2), 1);
-winningBoardLocation = find(boardWin, 1);
+    boardWin = any(all(tf, 1), 2) | any(all(tf, 2), 1);
+    winningBoardLocation = find(boardWin, 1);
 
-if ~isempty(winningBoardLocation)
-    break
-end
+    if ~isempty(winningBoardLocation)
+        break
+    end
 
 end
 

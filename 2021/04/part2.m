@@ -6,16 +6,16 @@ prevBoardWin = false(1,1,size(data, 3));
 
 for m = moves.'
 
-tf(data == m) = true;
+    tf(data == m) = true;
 
-boardWin = any(all(tf, 1), 2) | any(all(tf, 2), 1);
+    boardWin = any(all(tf, 1), 2) | any(all(tf, 2), 1);
 
-if all(boardWin)
-    winningBoardLocation = find(~prevBoardWin, 1);
-    break
-end
+    if all(boardWin)
+        winningBoardLocation = find(~prevBoardWin, 1);
+        break
+    end
 
-prevBoardWin = boardWin;
+    prevBoardWin = boardWin;
 
 end
 
